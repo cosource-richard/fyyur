@@ -92,32 +92,33 @@ class VenueForm(Form):
         # TODO implement enum restriction
         'genres', validators=[DataRequired()],
         choices=[
-            ('Alternative', 'Alternative'),
-            ('Blues', 'Blues'),
-            ('Classical', 'Classical'),
-            ('Country', 'Country'),
-            ('Electronic', 'Electronic'),
-            ('Folk', 'Folk'),
-            ('Funk', 'Funk'),
-            ('Hip-Hop', 'Hip-Hop'),
-            ('Heavy Metal', 'Heavy Metal'),
-            ('Instrumental', 'Instrumental'),
-            ('Jazz', 'Jazz'),
-            ('Musical Theatre', 'Musical Theatre'),
-            ('Pop', 'Pop'),
-            ('Punk', 'Punk'),
-            ('R&B', 'R&B'),
-            ('Reggae', 'Reggae'),
-            ('Rock n Roll', 'Rock n Roll'),
-            ('Soul', 'Soul'),
-            ('Other', 'Other'),
+            (1, 'Alternative'),
+            (2, 'Blues'),
+            (3, 'Classical'),
+            (4, 'Country'),
+            (5, 'Electronic'),
+            (6, 'Folk'),
+            (7, 'Funk'),
+            (8, 'Hip-Hop'),
+            (9, 'Heavy Metal'),
+            (10, 'Instrumental'),
+            (11, 'Jazz'),
+            (12, 'Musical Theatre'),
+            (13, 'Pop'),
+            (14, 'Punk'),
+            (15, 'R&B'),
+            (16, 'Reggae'),
+            (17, 'Rock n Roll'),
+            (18, 'Soul'),
+            (19, 'Swing'),
+            (20, 'Other'),
         ]
     )
     facebook_link = StringField(
         'facebook_link', validators=[URL()]
     )
-    website_link = StringField(
-        'website_link'
+    website = StringField(
+        'website'
     )
 
     seeking_talent = BooleanField( 'seeking_talent' )
@@ -201,25 +202,26 @@ class ArtistForm(Form):
     genres = SelectMultipleField(
         'genres', validators=[DataRequired()],
         choices=[
-            ('Alternative', 'Alternative'),
-            ('Blues', 'Blues'),
-            ('Classical', 'Classical'),
-            ('Country', 'Country'),
-            ('Electronic', 'Electronic'),
-            ('Folk', 'Folk'),
-            ('Funk', 'Funk'),
-            ('Hip-Hop', 'Hip-Hop'),
-            ('Heavy Metal', 'Heavy Metal'),
-            ('Instrumental', 'Instrumental'),
-            ('Jazz', 'Jazz'),
-            ('Musical Theatre', 'Musical Theatre'),
-            ('Pop', 'Pop'),
-            ('Punk', 'Punk'),
-            ('R&B', 'R&B'),
-            ('Reggae', 'Reggae'),
-            ('Rock n Roll', 'Rock n Roll'),
-            ('Soul', 'Soul'),
-            ('Other', 'Other'),
+            (1, 'Alternative'),
+            (2, 'Blues'),
+            (3, 'Classical'),
+            (4, 'Country'),
+            (5, 'Electronic'),
+            (6, 'Folk'),
+            (7, 'Funk'),
+            (8, 'Hip-Hop'),
+            (9, 'Heavy Metal'),
+            (10, 'Instrumental'),
+            (11, 'Jazz'),
+            (12, 'Musical Theatre'),
+            (13, 'Pop'),
+            (14, 'Punk'),
+            (15, 'R&B'),
+            (16, 'Reggae'),
+            (17, 'Rock n Roll'),
+            (18, 'Soul'),
+            (19, 'Swing'),
+            (20, 'Other'),
         ]
      )
     facebook_link = StringField(
@@ -227,8 +229,8 @@ class ArtistForm(Form):
         'facebook_link', validators=[URL()]
      )
 
-    website_link = StringField(
-        'website_link'
+    website = StringField(
+        'website'
      )
 
     seeking_venue = BooleanField( 'seeking_venue' )
